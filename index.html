@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<meta name="theme-color" content="#202124">
+<title>个人 AI 学习工作台</title>
+<link rel="stylesheet" href="styles.css">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%232F6B57'/%3E%3Ctext x='16' y='22' font-size='16' text-anchor='middle' fill='%23fff' font-family='sans-serif' font-weight='bold'%3E学%3C/text%3E%3C/svg%3E">
+</head>
+<body>
+
+<!-- ============ 桌面端深色侧边栏 ============ -->
+<aside id="sidebar" class="sidebar" aria-label="主导航">
+  <div class="sidebar-brand">
+    <div class="brand-mark">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/></svg>
+    </div>
+    <div class="brand-text">
+      <div class="brand-name">学习工作台</div>
+      <div class="brand-sub">Personal AI Workbench</div>
+    </div>
+  </div>
+
+  <nav class="sidebar-nav">
+    <div class="nav-group" data-section="today">
+      <button class="nav-item" data-view="today" data-help="help-today">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+        <span>今日</span>
+      </button>
+    </div>
+
+    <div class="nav-group">
+      <div class="nav-group-title">英语学习</div>
+      <button class="nav-item" data-view="en-words" data-help="help-en-words">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/></svg>
+        <span>单词本</span>
+      </button>
+      <button class="nav-item" data-view="en-reading" data-help="help-en-reading">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/></svg>
+        <span>英文阅读</span>
+      </button>
+      <button class="nav-item" data-view="en-listening" data-help="help-en-listening">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 18V5l12-2v13"/><circle cx="6" cy="18" r="3"/><circle cx="18" cy="16" r="3"/></svg>
+        <span>听说训练</span>
+      </button>
+      <button class="nav-item" data-view="en-scenarios" data-help="help-en-scenarios">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+        <span>场景英语</span>
+      </button>
+      <button class="nav-item" data-view="en-dialogues" data-help="help-en-dialogues">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+        <span>对话练习</span>
+      </button>
+      <button class="nav-item" data-view="en-plan" data-help="help-en-plan">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+        <span>学习计划</span>
+      </button>
+    </div>
+
+    <div class="nav-group">
+      <div class="nav-group-title">中文学习</div>
+      <button class="nav-item" data-view="zh-quotes" data-help="help-zh-quotes">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 11H6a2 2 0 0 1-2-2V7a2 2 0 0 1 2-2h2a2 2 0 0 1 2 2v10a3 3 0 0 1-3 3"/><path d="M20 11h-4a2 2 0 0 1-2-2V7a2 2 0 0 1 2-2h2a2 2 0 0 1 2 2v10a3 3 0 0 1-3 3"/></svg>
+        <span>佳句摘抄</span>
+      </button>
+      <button class="nav-item" data-view="zh-books" data-help="help-zh-books">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/></svg>
+        <span>读书计划</span>
+      </button>
+      <button class="nav-item" data-view="zh-creations" data-help="help-zh-creations">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 20h9"/><path d="M16.5 3.5a2.121 2.121 0 0 1 3 3L7 19l-4 1 1-4L16.5 3.5z"/></svg>
+        <span>创作板块</span>
+      </button>
+    </div>
+
+    <div class="nav-group">
+      <div class="nav-group-title">公共能力</div>
+      <button class="nav-item" data-view="inbox" data-help="help-inbox">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="22 12 16 12 14 15 10 15 8 12 2 12"/><path d="M5.45 5.11L2 12v6a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2v-6l-3.45-6.89A2 2 0 0 0 16.76 4H7.24a2 2 0 0 0-1.79 1.11z"/></svg>
+        <span>收集箱</span>
+        <span class="nav-badge" id="nav-badge-inbox" hidden>0</span>
+      </button>
+      <button class="nav-item" data-view="search" data-help="help-search">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+        <span>搜索</span>
+      </button>
+      <button class="nav-item" data-view="ai" data-help="help-ai">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2a4 4 0 0 1 4 4c0 1.95-1.4 3.58-3.25 3.94L12 20l-.75-10.06A4.004 4.004 0 0 1 8 6a4 4 0 0 1 4-4z"/><circle cx="6" cy="16" r="1.6"/><circle cx="18" cy="16" r="1.6"/></svg>
+        <span>AI 帮手</span>
+      </button>
+      <button class="nav-item" data-view="settings" data-help="help-settings">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z"/></svg>
+        <span>设置与数据</span>
+      </button>
+    </div>
+  </nav>
+
+  <div class="sidebar-footer">
+    <span>v1.0 · 本地数据</span>
+  </div>
+</aside>
+
+<!-- 手机端抽屉遮罩 -->
+<div id="drawer-mask" class="drawer-mask" hidden></div>
+
+<!-- ============ 主区域 ============ -->
+<div class="main" id="main">
+  <header class="topbar">
+    <button id="menu-btn" class="icon-btn menu-btn" aria-label="打开菜单">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+    </button>
+    <div class="topbar-title">
+      <h1 id="page-title">今日</h1>
+      <p id="page-subtitle" class="page-subtitle"></p>
+    </div>
+    <div class="topbar-actions">
+      <button id="topbar-search" class="icon-btn" aria-label="搜索" data-help="help-search">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+      </button>
+      <button id="topbar-help" class="icon-btn" aria-label="帮助" data-help="help-current">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg>
+      </button>
+    </div>
+  </header>
+
+  <main id="content" class="content">
+    <!-- 各视图由 app.js 渲染 -->
+  </main>
+
+  <!-- 手机端底部导航 -->
+  <nav id="bottom-nav" class="bottom-nav" aria-label="底部导航">
+    <button class="bn-item" data-view="today" data-help="help-today">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+      <span>今日</span>
+    </button>
+    <button class="bn-item" data-view="en-words" data-help="help-en-words">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/></svg>
+      <span>单词本</span>
+    </button>
+    <button id="bn-add" class="bn-item bn-add" data-help="help-inbox">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+      <span>收集</span>
+    </button>
+    <button id="bn-more" class="bn-item" data-help="help-more">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="1"/><circle cx="19" cy="12" r="1"/><circle cx="5" cy="12" r="1"/></svg>
+      <span>更多</span>
+    </button>
+  </nav>
+</div>
+
+<!-- 手机端"更多"抽屉（全屏） -->
+<div id="more-drawer" class="more-drawer" hidden>
+  <div class="more-drawer-header">
+    <h2>全部功能</h2>
+    <button id="more-close" class="icon-btn" aria-label="关闭">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+    </button>
+  </div>
+  <div class="more-drawer-body" id="more-drawer-body"><!-- app.js 填充 --></div>
+</div>
+
+<!-- 帮助弹层 -->
+<div id="help-modal" class="modal-mask" hidden>
+  <div class="modal help-modal">
+    <button class="modal-close icon-btn" id="help-close" aria-label="关闭">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+    </button>
+    <div class="help-icon-circle">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg>
+    </div>
+    <h3 id="help-title">帮助</h3>
+    <div id="help-content" class="help-content"></div>
+  </div>
+</div>
+
+<!-- 通用弹窗 -->
+<div id="modal-mask" class="modal-mask" hidden>
+  <div class="modal" id="modal-box">
+    <button class="modal-close icon-btn" id="modal-close" aria-label="关闭">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+    </button>
+    <div id="modal-body"></div>
+  </div>
+</div>
+
+<!-- 轻提示 -->
+<div id="toast" class="toast" hidden></div>
+
+<!-- 文章文本选择操作条 -->
+<div id="sel-bar" class="sel-bar" hidden>
+  <button data-act="highlight">划线</button>
+  <button data-act="comment">标注</button>
+  <button data-act="quote">摘抄</button>
+  <button data-act="sentence">长难句</button>
+</div>
+
+<script src="data.js"></script>
+<script src="app.js"></script>
+<script src="app2.js"></script>
+</body>
+</html>
